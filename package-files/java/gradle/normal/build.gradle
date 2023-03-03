@@ -14,8 +14,8 @@ configurations {
    implementation
 }
 
-ext.log4jversion = '1.2.16'
-ext.codecVersion = '1.9'
+ext.log4jversion = '2.0'
+ext.codecVersion = '1.13'
 def commonsLoggingVersion = "1.1.2"
 
 dependencies {
@@ -25,12 +25,12 @@ dependencies {
     compileOnly group: 'commons-lang', name: 'commons-lang', version: '2.4'
     compileOnly group: 'commons-logging', name: 'commons-logging', version: commonsLoggingVersion
 
-    implementation 'org.apache.httpcomponents:httpclient:4.5.4'
-    implementation('com.fasterxml.jackson.core:jackson-databind:2.12.4') {
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation('com.fasterxml.jackson.core:jackson-databind:2.14.0') {
         force = true
     }
 
-    implementation('commons-beanutils:commons-beanutils:1.9.0') {
+    implementation('commons-beanutils:commons-beanutils:1.9.4') {
         exclude group: 'commons-collections', module: 'commons-collections'
     }
 }
